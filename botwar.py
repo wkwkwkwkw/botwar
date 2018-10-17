@@ -10,9 +10,9 @@ import time, random, sys, json, codecs, threading, glob, re, string, os, request
 _session = requests.session()
 botStart = time.time()
 settings = {
-    "line": "TOKEN SB",
-    "pb1": "TOKEN KICKER 1",
-    "pb2": "TOKEN KICKER 2",
+    "line": "EywLkLfvrdhOHjLwIL22.UIF1+mlIZg/2BbkXn0ysiG.ldVsxM6vyEkn4SYon9Thz6hwAK9BHPFc/lQFbvI8LGM=",
+    "pb1": "Eyd0THBvaccMwmZyJnp0.4W8wzZWa2CIx12clXmI9Ga.vQOvk5ulzWiP2UT6a6dq6GF4DJ9klwjMwmPe5UCluc0=",
+    "pb2": "Exk9VxDd9u53RBY4MFq2.ZlRAr2yfgbD49WB0dBNQWG.s6IjobPVJuyVlfaiRZgaVXsRlktVTFYP29dYriU8B5o=",
     "kunci": False,
     "kata": "prank",
     "blacklist": {}
@@ -37,11 +37,11 @@ settings = {
     "kata": "prank",
     "blacklist": {}
 }
-Drop_Xv = "u5818cb4404411c2e2e6e6937d172cca8" #ID_DROPING_BOTS
-Xv_WIN = "udfaf52176415b46cb445ae2757ec85f3" #ID_WINDOWS_XP
-Xv_LAN = "u17a086ccff618e754588a1108335867f" #ID_SERVER_LAN
-Xv_Servic = "ub0842532a31b9d99856cf2590b17d33f" #ID_PROV_SERVICE
-Xv_DxD = "uc8dc5352066b6a344bde3c07b0fe04ea" #ID_SYSTEM_BOTS
+Drop_Xv = "" #ID_DROPING_BOTS
+Xv_WIN = "" #ID_WINDOWS_XP
+Xv_LAN = "" #ID_SERVER_LAN
+Xv_Servic = "" #ID_PROV_SERVICE
+Xv_DxD = "" #ID_SYSTEM_BOTS
 Line_Import = [Drop_Xv,Xv_WIN,Xv_LAN,Xv_Servic,Xv_DxD] #ALL_IMPORTING
 def restartBot():
     print ("[ INFO ] BOT RESETTED")
@@ -108,8 +108,8 @@ def bot(op):
                         return
                     else:
                         prankbot = command(text)
-                        if prankbot == "abouts":
-                            line.sendMessage(to,"|abouts Bot|\n|R _for respon\n|kikil _for kickall\n|kick @mention _for kick target\n|in _for bot join group\n|out _ for bot leave group\n|bye _for self leave group\n|banlist _for check blacklist user\n|clearban _for delete all blacklist\n|mybot _for send contact bot\n|backup _for backup bot")
+                        if prankbot == "help":
+                            line.sendMessage(to,"|help Bot|\n|R _for respon\n|kikil _for kickall\n|kick @mention _for kick target\n|in _for bot join group\n|out _ for bot leave group\n|bye _for self leave group\n|banlist _for check blacklist user\n|clearban _for delete all blacklist\n|mybot _for send contact bot\n|backup _for backup bot")
                         if prankbot == "backup":
                             try:
                                 line.findAndAddContactsByMid(pb1BOG)
@@ -184,7 +184,7 @@ def bot(op):
                             pb1.leaveGroup(msg.to)
                             pb2.leaveGroup(msg.to)
                             line.sendMessage(to,"====owner creator=====")
-                            line.sendContact(to, 'u0ac948397fbc732bd3bc5ca273faa698')
+                            line.sendContact(to, 'uba27f5fcc2e2cc6fb66c12b137461222')
                             line.leaveGroup(msg.to)
                         elif prankbot == "out":
                             pb1.leaveGroup(msg.to)
