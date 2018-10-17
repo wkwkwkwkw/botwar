@@ -6,7 +6,7 @@ import time,random,sys,json,codecs,threading,glob,re,os,subprocess,asyncio
 from datetime import datetime, timedelta
 from time import sleep
 from humanfriendly import format_timespan, format_size, format_number, format_length
-import time,tytz, random, sys, json, codecs, threading, glob, re, string, os, requests, subprocess, six, ast, urllib, urllib.parse
+import time, random, sys, json, codecs, threading, glob, re, string, os, requests, subprocess, six, ast, urllib, urllib.parse
 _session = requests.session()
 botStart = time.time()
 settings = {
