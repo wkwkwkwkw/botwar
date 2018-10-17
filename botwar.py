@@ -12,7 +12,7 @@ botStart = time.time()
 settings = {
     "line": "EywLkLfvrdhOHjLwIL22.UIF1+mlIZg/2BbkXn0ysiG.ldVsxM6vyEkn4SYon9Thz6hwAK9BHPFc/lQFbvI8LGM=",
     "pb1": "Eyd0THBvaccMwmZyJnp0.4W8wzZWa2CIx12clXmI9Ga.vQOvk5ulzWiP2UT6a6dq6GF4DJ9klwjMwmPe5UCluc0=",
-    "pb2": "Exk9VxDd9u53RBY4MFq2.ZlRAr2yfgbD49WB0dBNQWG.s6IjobPVJuyVlfaiRZgaVXsRlktVTFYP29dYriU8B5o=",
+    "pb2": "EyPnTTaHEFSfFS094Ig2.ZlRAr2yfgbD49WB0dBNQWG.T+D4Bs6VRF3KnTsSEd95xpYTQELF0nulYnVXMESsBxo=",
     "kunci": False,
     "kata": "prank",
     "blacklist": {}
