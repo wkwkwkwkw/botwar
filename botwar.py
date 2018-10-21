@@ -6,13 +6,13 @@ import time,random,sys,json,codecs,threading,glob,re,os,subprocess,asyncio
 from datetime import datetime, timedelta
 from time import sleep
 from humanfriendly import format_timespan, format_size, format_number, format_length
-import time, random, sys, json, codecs, threading, glob, re, string, os, requests, subprocess, six, ast, urllib, urllib.parse
+import time, pytz, random, sys, json, codecs, threading, glob, re, string, os, requests, subprocess, six, ast, urllib, urllib.parse
 _session = requests.session()
 botStart = time.time()
 settings = {
-    "line": "EywLkLfvrdhOHjLwIL22.UIF1+mlIZg/2BbkXn0ysiG.ldVsxM6vyEkn4SYon9Thz6hwAK9BHPFc/lQFbvI8LGM=",
-    "pb1": "Eyd0THBvaccMwmZyJnp0.4W8wzZWa2CIx12clXmI9Ga.vQOvk5ulzWiP2UT6a6dq6GF4DJ9klwjMwmPe5UCluc0=",
-    "pb2": "EyPnTTaHEFSfFS094Ig2.ZlRAr2yfgbD49WB0dBNQWG.T+D4Bs6VRF3KnTsSEd95xpYTQELF0nulYnVXMESsBxo=",
+    "line": "EyHSoTRITdhbruDt0n72.UIF1+mlIZg/2BbkXn0ysiG.F5xJ3vdl93DJ3OyRhVKuWstUdLC1CcQ3zuG7WYbR3bc=",
+    "pb1": "Eyboj2ZTc2PmelhKzuE9.DPDheMPbzrkkMXdMYxMlgq.vcC/ux/NH1RjvQGvJvwxfhKJC1NQ8zHzS269j/Udagg=",
+    "pb2": "EyPHQs0diEFGRMRUKzJ2.gw1c4PjY91rlrBM+ITP5eG.VFkqyO4EfvfVE1Vc6YVkSZPiSnuB8sihbLTxmOMV5gc=",
     "kunci": False,
     "kata": "prank",
     "blacklist": {}
@@ -108,9 +108,9 @@ def bot(op):
                         return
                     else:
                         prankbot = command(text)
-                        if prankbot == "help":
-                            line.sendMessage(to,"|help Bot|\n|R _for respon\n|kikil _for kickall\n|kick @mention _for kick target\n|in _for bot join group\n|out _ for bot leave group\n|bye _for self leave group\n|banlist _for check blacklist user\n|clearban _for delete all blacklist\n|mybot _for send contact bot\n|backup _for backup bot")
-                        if prankbot == "backup":
+                        if prankbot == "h":
+                            line.sendMessage(to,"|h\n|R\n|kl\n|k\n|.\n|o\n|by\n|banlist\n|clearban\n|bot\n|b")
+                        if prankbot == "b":
                             try:
                                 line.findAndAddContactsByMid(pb1BOG)
                                 line.findAndAddContactsByMid(pb2BOG)
@@ -136,12 +136,12 @@ def bot(op):
                                 line.sendMessage(to,"succes.!!.\nready..")
                             except:
                                 line.sendMessage(to,"ready..")
-                        if prankbot == "in":
+                        if prankbot == ".":
                             anggota = [pb1BOG,pb2BOG]
                             line.inviteIntoGroup(msg.to, anggota)
                             pb1.acceptGroupInvitation(msg.to)
                             pb2.acceptGroupInvitation(msg.to)
-                        elif prankbot.startswith("kick "):
+                        elif prankbot.startswith("k "):
                             if 'MENTION' in msg.contentMetadata.keys()!= None:
                                 names = re.findall(r'@(\w+)', text)
                                 mention = ast.literal_eval(msg.contentMetadata['MENTION'])
@@ -180,16 +180,16 @@ def bot(op):
                             profile = pb2.getProfile()
                             text = profile.displayName + "􀜁􀅔􏿿"
                             pb2.sendMessage(to, text)
-                        elif prankbot == "bye":
+                        elif prankbot == "by":
                             pb1.leaveGroup(msg.to)
                             pb2.leaveGroup(msg.to)
                             line.sendMessage(to,"====owner creator=====")
                             line.sendContact(to, 'uba27f5fcc2e2cc6fb66c12b137461222')
                             line.leaveGroup(msg.to)
-                        elif prankbot == "out":
+                        elif prankbot == "o":
                             pb1.leaveGroup(msg.to)
                             pb2.leaveGroup(msg.to)
-                        elif prankbot == "kikil":
+                        elif prankbot == "kl":
                             if msg.toType == 2:
                                 gs = line.getGroup(msg.to)
                                 gs = pb1.getGroup(msg.to)
